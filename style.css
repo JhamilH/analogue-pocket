@@ -1,0 +1,387 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Arya', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #000;
+    height: 3.8rem;
+    width: 100%;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1rem;
+    margin: auto;
+}
+
+.navlinks a { 
+    padding-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.navlinks a:hover {
+    color: #DE272C;
+}
+
+.navbar img {
+    position: absolute;
+    width: 2rem;
+    height:2rem;
+}
+
+.logo {
+   padding-right: 4rem;
+   margin-left: 20px;
+   padding-bottom: 28px;
+}
+
+.analogue {
+    margin-right: 70px;
+    padding-bottom: 28px;
+}
+
+.searchbtn { 
+    font-size: 1.4rem;
+    margin-right: 2rem;
+    color: white;
+    transition: 0.3s;
+}
+
+.userbtn {
+    font-size: 1.4rem;
+    margin-right: 4rem;
+    color: white;
+    transition: 0.4s;
+}
+
+.searchbtn:hover {
+    cursor: pointer;
+    color: #DE272C;
+}
+
+.userbtn:hover {
+    cursor: pointer;
+    color: #DE272C;
+}
+
+.productbar {
+    background-color: #262626;
+}
+
+.productbar h2 {
+    display: block;
+    padding-top: 1.8rem;
+    padding-left: 2.4rem;
+}
+
+.prodlinks {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-right: 2.5rem;
+    padding-bottom: 0.4rem;
+    gap: 20px;
+}
+
+.prodlinks a {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+    
+}
+
+.prodlinks a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #DE272C;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.prodlinks a:hover::after {
+    transform: scale(1);
+    transform-origin: bottom left;
+}
+
+.prodlinks a:hover {
+    color: #DE272C;
+}
+
+.productpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 80px 10%;
+    background-color: #fff;
+}
+
+.productpage img {
+    max-width: 650px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+}
+
+.product-content {
+    max-width: 900px;
+}
+
+.product-content h1 {
+    font-size: 3.5rem;        /* Adjusted size to look better side-by-side */
+    margin-bottom: 20px;
+    color: #262626;
+}
+
+.product-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;         /* Makes the paragraph easier to read */
+    color: #262626;
+    margin-bottom: 30px;
+}
+
+#carousel {
+    margin: auto;
+    width: 80%;
+}
+
+.modern, .modern2 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 80px;
+   padding: 80px 10%;
+   clear: both;
+}
+
+.modern2 {
+    flex-direction: row-reverse;
+}
+
+.modern img, .modern2 img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modern-text {
+    max-width: 500px;
+    font-size: large;
+}
+
+
+.specs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    clear: both;          /* Fixes the float issue */
+    width: 70%;
+    max-width: 500px;
+    margin: 50px auto;    /* 50px top/bottom, auto left/right */
+    
+    padding: 20px;
+    background-color: #f7f7f7;
+    height: auto;
+    min-height: 200px;
+}
+
+.specs img {
+    max-width: 100%;
+    height: auto;
+}
+
+.specs a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.specs a:hover {
+    color: #DE272C;
+}
+
+.specs ul {
+    color: #8f8f8f;
+    font-size: small;
+    list-style-type: none;
+}
+
+.signup {
+    margin-bottom: 6rem;
+    margin: auto;
+}
+
+.signup h3 {
+    text-align: center;
+}  
+
+.landingpage {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.landingpage button {
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+  
+.landingpage button:focus {
+    text-decoration: none;
+}
+  
+  .landingpage button:hover {
+    text-decoration: none;
+}
+  
+.landingpage button:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+}
+  
+.landingpage button:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+  
+@media screen and (max-width: 1200px) {
+    .productpage {
+        flex-direction: column;   /* Stacks them */
+        text-align: center;        /* Centers text on mobile */
+        padding: 40px 5%;
+    }
+
+    .productpage img {
+        max-width: 80%;         /* Makes the main image a bit smaller on phones */
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (min-width: 768px) {
+ .landingpage button {
+      padding: 12px 50px;
+  }
+}
+
+@media screen and (max-width: 968px) {
+    .navlinks {
+        font-size: 0.8rem;
+        padding: 0;
+    }
+    .searchbtn {
+        display: none;
+    }
+    .userbtn {
+        display: none;
+    }
+    .productbar ul a {
+        display: none;
+    }
+    .productbar h2 {
+        text-align: center;
+        position: relative;
+        bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+   
+}
+
+@media screen and (max-width: 768px) {
+    .navlinks a {
+        margin: auto;
+    }
+    .logo {
+        display: none;
+    }
+    .analogue {
+        display: none;
+    }
+}
+
+/* 768px is the standard "Tablet/Phone" breakpoint */
+@media screen and (max-width: 1200px) {
+    .modern, .modern2 {
+        flex-direction: column;   /* Stacks the image on top of the text */
+        text-align: center;        /* Centers the text for a better mobile look */
+        padding: 40px 5%;          /* Reduces padding so it fits on small screens */
+        gap: 30px;                 /* Brings the image and text a bit closer */
+    }
+
+    .modern-text {
+        max-width: 100%;           /* Allows the text to use the full width of the phone */
+    }
+
+    .modern img, .modern2 img {
+        max-width: 60%;           /* Ensures the image doesn't poke out the side */
+        display: block;
+        margin: 0 auto;            /* Centers the image */
+        height: auto;
+    }
+}
+
+@keyframes fadeInUp {            /* When the page loads the images and text slide up slightly */
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.productpage, .modern, .modern2 {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
