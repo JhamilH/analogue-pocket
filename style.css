@@ -294,7 +294,27 @@ body {
     box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);
 }
-  
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    /* "transition" tells the browser: when opacity or transform change,
+       animate that change over 0.6 seconds using an ease-out curve */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+ 
+/* The ending state — element is fully visible at its normal position */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+ 
+/* We remove the old CSS animation since JavaScript now handles this */
+.productpage, .modern, .modern2 {
+    animation: none;
+}
+
 @media screen and (max-width: 1200px) {
     .productpage {
         flex-direction: column;   /* Stacks them */
